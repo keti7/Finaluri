@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=f, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <p class="header-p">Roca.</p>
+                <div class="texts">
+                    <div class="text1">01</div>
+                    <div class="text2">About me</div>
+                    <div class="slider">
+                        <img src="images/2.png" alt="Image 1" class="slide">
+                        <img src="images/3.png" alt="Image 2" class="slide">
+                        <div class="text3">
+                            <p claas="text4">Hi, I’ Am</p>
+                            <p class="text5">Ketevan zhamutashvili</p>
+                            <p class="text6">I am frontend developer @ Company.com</p>
+                            <div class="icons">
+                                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon"></a>
+                                <a href="https://github.com/keti7"><img src="images/github.png" alt="github"></a>
+                                <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google"></a>
+                                <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+        </section>
+        <script>
+          // header
+          let slideIndex = 0;
+          const slides = document.querySelectorAll('.slide');
+          function showSlides() {
+          for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+          slideIndex = 1;
+          }
+          slides[slideIndex - 1].style.display = 'block';
+          }
+          function startSlider() {
+          showSlides();
+          setInterval(showSlides, 5000);
+          }
+          startSlider();
+
+        </script>
+    </body>
+</html>
