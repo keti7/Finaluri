@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=f, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -20,10 +20,10 @@
                             <p class="text5">Ketevan zhamutashvili</p>
                             <p class="text6">I am frontend developer @ Company.com</p>
                             <div class="icons">
-                                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon"></a>
-                                <a href="https://github.com/keti7"><img src="images/github.png" alt="github"></a>
-                                <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google"></a>
-                                <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
+                                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon" class="icon"></a>
+                                <a href="https://github.com/keti7"><img src="images/github.png" alt="github" class="icon"></a>
+                                <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google" class="icon"></a>
+                                <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="icon"></a>
                             </div>
                         </div>
                     </div>
@@ -68,14 +68,45 @@
                   <div class="percantage" data-percentage="100">100%</div>
                 </div>
                 <div class="icons">
-                    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon"></a>
-                    <a href="https://github.com/keti7"><img src="images/github.png" alt="github"></a>
-                    <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google"></a>
-                    <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon" class="icon"></a>
+                    <a href="https://github.com/keti7"><img src="images/github.png" alt="github" class="icon"></a>
+                    <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google" class="icon"></a>
+                    <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="icon" ></a>
+                   
                 </div>
               </div>
               </div>
             </div>
+            </div>
+            <div class="contact">
+                <div class="phone-icon">
+                    <div class="circle"></div>
+                    <img src="images/phone icon.png" alt="image" class="foto"/>
+                    <div class="phone-info">
+                    <h4>Phone number</h4>
+                    <p>+995 595105250</p>
+                     </div>
+                    <div class="location-icon">
+                        <div class="circle"></div>
+                        <img src="images/location icon.png" alt="image" class="foto2"/>
+                        <div class="location-info">
+                            <h4>User adresses</h4>
+                            <p>24058, Belgium, Brussels, 
+                                <br>
+                                Liutte 27 United State</p>
+                        </div>
+                     </div>
+                     <div class="email-icon">
+                        <div class="circle">
+                            <img src="images/email icon.png" alt="image" class="email"/>
+                            <div class="email-info">
+                                <h4>Email Address</h4>
+                                <p>youoffice@company.com</p>
+                            </div>
+                        </div>
+
+                     </div>
+                </div>
             </div>
             
 
@@ -127,31 +158,10 @@
           }
           startSlider();
         
-        
-        
-        
-          //   section
-          const sections = document.querySelectorAll('.section');
+        //   section
 
-          const options = {
-          rootMargin: '0px',
-          threshold: 0.5 
-          };
 
-         const observer = new IntersectionObserver((entries, observer) => {
-         entries.forEach(entry => {
-         if (entry.isIntersecting) {
-         const percentagediv = entry.target.querySelector('.percantage');
-         const percentage = percentagediv.getAttribute('data-percentage');
-         percentagediv.style.width = percentage + '%';
-         observer.unobserve(entry.target);
-         }
-         }); 
-         }, options);
 
-         sections.forEach(section => {
-         observer.observe(section);
-         });
 
 
         
