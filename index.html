@@ -41,8 +41,43 @@
             <div class="photo">
                 <img src="images/2.png" alt="image" class="image">
             </div>
+            <div class="percantage-section">
+            <div class="section" id="section1">
+                <h2>Html</h2>
+                <div class="percantage-div">
+                  <div class="percantage" data-percentage="85">85%</div>
+                </div>
+              </div>
+              <div class="section" id="section2">
+                <h2>Css</h2>
+                <div class="percantage-div">
+                  <div class="percantage" data-percentage="85">85%</div>
+                </div>
+              </div>
+              
+              <div class="section" id="section3">
+                <h2>Javascript</h2>
+                <div class="percantage-div">
+                  <div class="percantage" data-percentage="75">75%</div>
+                </div>
+              </div>
+              
+              <div class="section" id="section4">
+                <h2>bootstrap</h2>
+                <div class="percantage-div">
+                  <div class="percantage" data-percentage="100">100%</div>
+                </div>
+                <div class="icons">
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon"></a>
+                    <a href="https://github.com/keti7"><img src="images/github.png" alt="github"></a>
+                    <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google"></a>
+                    <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube"></a>
+                </div>
+              </div>
+              </div>
             </div>
-
+            </div>
+            
 
 
 
@@ -96,6 +131,27 @@
         
         
           //   section
+          const sections = document.querySelectorAll('.section');
+
+          const options = {
+          rootMargin: '0px',
+          threshold: 0.5 
+          };
+
+         const observer = new IntersectionObserver((entries, observer) => {
+         entries.forEach(entry => {
+         if (entry.isIntersecting) {
+         const percentagediv = entry.target.querySelector('.percantage');
+         const percentage = percentagediv.getAttribute('data-percentage');
+         percentagediv.style.width = percentage + '%';
+         observer.unobserve(entry.target);
+         }
+         }); 
+         }, options);
+
+         sections.forEach(section => {
+         observer.observe(section);
+         });
 
 
         
