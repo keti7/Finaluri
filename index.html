@@ -108,19 +108,78 @@
                      </div>
                 </div>
             </div>
-            
-
-
-
-
-
-
-
-
-
-
         </section>
-
+        <section>
+            <div class="boxs">
+                <div class="box">
+                    <img src="images/design.svg" class="create"alt="image"/>
+                    <p class="create-text tooltip-text">create a web page</p>
+                </div>
+                <div class="box">
+                    <img src="images/service.svg" class="service" alt="image"/>
+                    <p class="service-text tooltip-text">Best service</p>
+                </div>
+                <div class="box">
+                    <img src="images/service.svg" class="information" alt="image"/>
+                    <p class="information-text tooltip-text">Posting information</p>
+                </div>
+                <div class="box">
+                    <img src="images/pixel.svg" class="pixel" alt="image"/>
+                    <p class="pixel-text tooltip-text">Perfect result</p>
+                </div>
+            </div>
+            <div class="boxs2">
+                <div class="box">
+                    <img src="images/ideas.svg" class="ideas" alt="image"/>
+                    <p class="ideas-text tooltip-text">Good ideas</p>
+                </div>
+                <div class="box">
+                    <img src="images/analysis.svg" class="analysis" alt="image"/>
+                    <p class="analysis-text tooltip-text">Code analysis</p>
+                </div>
+                <div class="box">
+                    <img src="images/chart.svg" class="manage" alt="image"/>
+                    <p class="manage-text tooltip-text">Fully managed</p>
+                </div>
+                <div class="box">
+                    <img src="images/support.svg" class="support" alt="image"/>
+                    <p class="support-text tooltip-text">Helpful support</p>
+                </div>
+            </div>
+        </section>
+        <section>
+        <div class="clip-img">
+            <div class="slider2">
+                <div class="sliders">
+                    <div class="slides">
+                        <p class="slides-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                        <img src="images/1.svg" alt="image" class="slide-img" />
+                        <div class="persons">
+                           <h2>olivia rodrigez</h2>
+                           <p>Designer</p>
+                        </div>
+                        </div>
+                        <div class="slides">
+                            <p class="slides-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                            <img src="images/2.svg" alt="image" class="slide-img" />
+                            <div class="persons">
+                               <h2>John doe</h2>
+                               <p>Developer</p>
+                            </div>
+                            </div>
+                            <div class="slides">
+                                <p class="slides-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                                <img src="images/3.svg" alt="image" class="slide-img" />
+                                <div class="persons">
+                                   <h2>George smith</h2>
+                                   <p>Developer</p>
+                                </div>
+                                </div>
+                </div>
+            </div>
+            <img src="images/clip.jpg" class="clip" alt="image"/>
+        </div>
+        </section>
 
 
 
@@ -158,14 +217,58 @@
           }
           startSlider();
         
-        //   section
+          //   section
+          const tooltipContent = {
+          'create': 'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'service': 'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'information':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'pixel':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'ideas':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'analysis':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'manage':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          'support':'Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor',
+          };
 
+          const boxes = document.querySelectorAll('.box');
 
+          boxes.forEach(function(box) {
+          const tooltipText = box.querySelector('.tooltip-text');
 
+          box.addEventListener('mousemove', function(event) {
+            const className = box.querySelector('img').classList[0]; 
+            tooltipText.textContent = tooltipContent[className]; 
+            tooltipText.style.display = 'block';
+          });
 
+          box.addEventListener('mouseleave', function(event) {
+            tooltipText.style.display = 'none';
+          });
+        });
+        //    slider2
+           let currentSlide = 0;
+           const slide = document.querySelectorAll('.slides');
 
-        
+           function showSlide(index) {
+             slide.forEach((slides, i) => {
+                if (i === index) {
+                    slides.style.display = 'flex';
+                } else {
+                    slides.style.display = 'none';
+                }
+              });
+            }
 
+           function nextSlide() {
+             currentSlide = (currentSlide + 1) % slide.length;
+             showSlide(currentSlide);
+            }
+
+            function startSlideshow() {
+             showSlide(currentSlide);
+             setInterval(nextSlide, 5000); 
+            }
+
+           startSlideshow();
 
         </script>
     </body>
