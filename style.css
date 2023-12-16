@@ -480,3 +480,109 @@
     margin-left: -80px;
     margin-top: 50px;
 }
+.title{
+    margin-left: 700px;
+    width: 445px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    opacity: 1;
+    margin-top: 30px;
+}
+.boxsebi{
+    display: flex;
+    margin-left: 200px;
+    gap: 10px;
+}
+.boxsebi2{
+    width: 300px;
+    height: 350px;
+    background: #15263E 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.boxsebi2 p{
+    height: 40px;
+    text-align: left; 
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-left: 60px;
+}
+.boxsebi3{
+    width: 300px;
+    height: 350px;
+    background: #555555 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.boxsebi3 p{
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    color: #ECECEC;
+    opacity: 1;
+    margin-top: 130px;
+    margin-left: 20px
+}
+.boxses2{
+    display: flex;
+    margin-left: 510px;
+    gap: 10px;
+    margin-top: 10px;
+}
+.satauri{
+    width: 427px;
+    height: 94px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #2E2E2E;
+    opacity: 1;
+    margin-left: 700px;
+    margin-top: 50px;
+}
+.blocks{
+    display: flex;
+    margin-left: 150px;
+}
+.block{
+    height: 400px;
+    width: 600px;
+    background-color: #999898;
+    opacity: 1;
+
+}
+.block2{
+    height: 400px;
+    width: 600px;
+    opacity: 1;
+}
+.images{
+    width: 29px;
+    height: 34px;
+    opacity: 1;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.teqsti{
+    text-align: left;
+    opacity: 1;
+    color: #494949;
+}
+.teqsti2{
+    width: 537px;
+    height: 20px;
+    text-align: left;
+    letter-spacing: 0.48px;
+    color: #494949;
+}
+.articles1{
+    height: 400px;
+    width: 600px;
+}
+.blocks2{
+    display: flex;
+}
+.blocks3{
+    display: flex;
+    opacity: 1;
+    margin-left: 150px;
+}

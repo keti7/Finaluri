@@ -180,6 +180,67 @@
             <img src="images/clip.jpg" class="clip" alt="image"/>
         </div>
         </section>
+        <section>
+            <h1 class="title">Latest projects</h1>
+            <div class="boxsebi">
+                <div class="boxsebi2">
+                    <p>All</p>
+                    <p>Work ideas</p>
+                    <p>Mockup</p>
+                    <p>PSD design</p>
+                    <p>Logo</p>
+                    <p>Presentation </p>
+                    <p>Icons</p>
+                </div>
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+            </div>
+            <div class="boxses2">
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+                <div class="boxsebi3"><p>Lorem ipm dolor amet, consecte adipiing lit Sunt sed ad possimus magm maiores.Ipsa dolor</p></div>
+            </div>
+        </section>
+        <section>
+            <h1 class="satauri">Latest Articles</h1>
+            <div class="blocks">
+                <div class="block">
+                    <img src="images/Icon1.svg" alt="image" class="images"/>
+                    <p class="teqsti">IN FREELANCING COMPANY</p>
+                    <p class="teqsti2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. <br>
+                         READ MORE</p>
+
+                </div>
+                <div class="block2">
+                    <img src="images/articles 1.jpg" alt="image" class="articles1"/>
+                </div>
+            </div>
+            <div class="blocks2">
+                <div class="block2">
+                    <img src="images/articles 2.jpg" alt="image" class="articles1"/>
+                </div>
+                <div class="block">
+                    <img src="images/Icon2.svg" alt="image" class="images"/>
+                    <p class="teqsti">IN FREELANCING COMPANY</p>
+                    <p class="teqsti2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. <br>
+                         READ MORE</p>
+
+                </div>
+            </div>
+            <div class="blocks3">
+                <div class="block">
+                    <img src="images/Icon3 (1).svg" alt="image" class="images"/>
+                    <p class="teqsti">IN FREELANCING COMPANY</p>
+                    <p class="teqsti2">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. <br>
+                         READ MORE</p>
+
+                </div>
+                <div class="block2">
+                    <img src="images/articles 3.jpg" alt="image" class="articles1"/>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -269,7 +330,21 @@
             }
 
            startSlideshow();
+        //    section2
+            const categories = document.querySelectorAll('.boxsebi2 p');
+            const projects = document.querySelectorAll('.boxsebi3');
+
+            categories.forEach((category, index) => {
+              category.addEventListener('click', () => {
+              projects.forEach(project => {
+              project.style.display = 'none';
+           });
+            projects[index].style.display = 'block';
+         });
+         });
+
+
 
         </script>
     </body>
-</html>/
+</html>
