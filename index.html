@@ -241,20 +241,45 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <section>
+            <h2 class="rosa">Rosa Team</h2>
+                <div class="logos">
+                    <img src="images/logo 1.png" alt="image" class="rosa-img"/>
+                    <img src="images/logo 1.png" alt="image" class="rosa-img"/>
+                    <img src="images/logo2.png" alt="image" class="rosa-img"/>
+                    <img src="images/logo3.png" alt="image" class="rosa-img"/>
+                    <img src="images/logo4.png" alt="image" class="rosa-img"/>
+                </div>
+        </section>
+        <footer>
+            <form>
+            <img src="images/map.png" class="map" alt="image"/>
+            <div class="contactus">
+                <h2>Contact us</h2>
+                <div class="inputs">
+                <input type="text" placeholder="name" id="name" name="name" required="">
+                <input type="email" placeholder="email" id="email" name="email" required="">
+                <input type="url" placeholder="website" id="website" name="website" required="">
+                </div>
+                <input type="message" class="message" placeholder="message" id="message" name="message" required="">
+                <p id="modal"></p>
+            </div>
+            <button type="submit" class="button2">SEND MESSAGE</button>
+            </form>
+            <div class="black-box">
+                <h2>Roca</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.</p>
+                <div class="icons3">
+                    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="fb-icon" class="icon"></a>
+                    <a href="https://github.com/keti7"><img src="images/github.png" alt="github" class="icon"></a>
+                    <a href="https://www.google.com/?&bih=739&biw=1536&hl=en"><img src="images/google.png" alt="google" class="icon"></a>
+                    <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="youtube" class="icon"></a>
+                </div>
+            </div>
+            <div class="black-box2">
+                <p>© All right reserved 2019. Rosa - Creative Agency Website PSD Template.</p>
+            </div>
+        </footer>
 
 
 
@@ -342,9 +367,46 @@
             projects[index].style.display = 'block';
          });
          });
+         //  footer
+         document.addEventListener('DOMContentLoaded', function() {
+         document.querySelector('form').addEventListener('submit', function(event) {
+         event.preventDefault();
 
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const website = document.getElementById('website').value;
+         const message = document.querySelector('.message').value;
 
+         const data = {
+            name,
+            email,
+            website,
+            message
+         };
 
+         fetch('https://borjomi.loremipsum.ge/api/send-message', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+            
+         })
+         .then(response => response.json())
+         .then(result => {
+            if (result.status === 1) {
+                modal.textContent = 'Thank you for getting in touch! We appreciate you contacting us.';
+                modal.style.display = 'block';
+            } else {
+                console.error('Message sending failed:', result.desc);
+            }
+         })
+         .catch(error => {
+            console.error('Error:', error);
+         });
+       });
+      });
+    
         </script>
     </body>
 </html>
