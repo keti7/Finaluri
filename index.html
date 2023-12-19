@@ -355,18 +355,22 @@
             }
 
            startSlideshow();
-        //    section2
-            const categories = document.querySelectorAll('.boxsebi2 p');
-            const projects = document.querySelectorAll('.boxsebi3');
+           //    section2
+           const titles = document.querySelectorAll('.boxsebi2 p');
+           const containers = document.querySelectorAll('.boxsebi3');
 
-            categories.forEach((category, index) => {
-              category.addEventListener('click', () => {
-              projects.forEach(project => {
-              project.style.display = 'none';
+           titles.forEach((title, index) => {
+           title.addEventListener('click', () => {
+           containers.forEach(container => {
+           container.style.display = 'none';
            });
-            projects[index].style.display = 'block';
-         });
-         });
+           containers[index].style.display = 'block';
+           });
+           });
+
+
+
+
          //  footer
          document.addEventListener('DOMContentLoaded', function() {
          document.querySelector('form').addEventListener('submit', function(event) {
